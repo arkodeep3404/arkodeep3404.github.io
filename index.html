@@ -201,7 +201,7 @@
                         Resume </a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your E-Mail" required>
                         <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
@@ -240,6 +240,16 @@
         function closemenu() {
             sidemenu.style.right = "-200px"
         }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbymTjcyq6VV3mDrpR7VCNXSyutSHNofoBW-Fix1RSPASY1RJQj5cVh73ofqXXvhzaF9rA/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
 
     </script>
 
