@@ -1,374 +1,583 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkodeep Chatterjee</title>
+    <title>Arkodeep Chatterjee | Full-Stack AI Engineer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Style -->
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
     <script src="https://kit.fontawesome.com/dd35ca29da.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <a href="#" class="name"><span class="header-text">ArkodeepC</span></a>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://docs.google.com/document/d/1PfYKMSB0oWv6hj3x3k7A-_q2Dg6KL4gka_lhkeJcXZQ/edit?usp=sharing"
-                            target="_blank">Work</a>
-                    </li>
-                    <li><a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank">Calender</a>
-                    </li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <P>challenging the status quo</P>
-                <h1><span>ArkodeepC</span><br>Kolkata, India</h1>
+    <!-- Floating Navbar -->
+    <header class="navbar-container">
+        <nav class="container nav-content">
+            <a href="#home" class="logo-text">Arkodeep<span>C</span></a>
+            <ul id="sidemenu">
+                <li><a href="#about" onclick="closemenu()">About</a></li>
+                <li><a href="#experience" onclick="closemenu()">Experience</a></li>
+                <li><a href="#projects" onclick="closemenu()">Projects</a></li>
+                <li><a href="#skills" onclick="closemenu()">Skills</a></li>
+                <li><a href="images/ArkodeepC_Resume.pdf" target="_blank" download onclick="closemenu()">Resume <i class="fa-solid fa-download" style="font-size: 11px;"></i></a></li>
+                <li><a href="https://docs.google.com/document/d/1PfYKMSB0oWv6hj3x3k7A-_q2Dg6KL4gka_lhkeJcXZQ/edit?usp=sharing" target="_blank" class="highlight-link" onclick="closemenu()">Work History <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i></a></li>
+                <li class="nav-cta-li"><a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank" class="nav-cta-btn" onclick="closemenu()">Book Call</a></li>
+                <i class="fa-solid fa-xmark close-icon" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars menu-icon" onclick="openmenu()"></i>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <div class="availability-badge">
+                <span class="pulse-dot"></span> Available for Hybrid Roles & Consulting
+            </div>
+            <h1 class="hero-title">Arkodeep Chatterjee</h1>
+            <h2 class="hero-subtitle">Full-Stack AI Engineer</h2>
+            <p class="hero-tagline">Building realtime voice agents, agentic systems, and production-grade LLM infrastructure.</p>
+            
+            <div class="hero-ctas">
+                <a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank" class="btn btn-primary">
+                    <i class="fa-regular fa-calendar-days"></i> Book a Call
+                </a>
+                <a href="images/ArkodeepC_Resume.pdf" target="_blank" download class="btn btn-secondary">
+                    <i class="fa-solid fa-download"></i> Download Resume (PDF)
+                </a>
+                <a href="https://docs.google.com/document/d/1PfYKMSB0oWv6hj3x3k7A-_q2Dg6KL4gka_lhkeJcXZQ/edit?usp=sharing" target="_blank" class="btn btn-tertiary">
+                    <i class="fa-regular fa-file-lines"></i> Detailed Work History (G-Doc)
+                </a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/arkodeep3404" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arkodeep-chatterjee/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/arkodeep3404" target="_blank" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="mailto:arkodeep3404@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="about">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png">
+            <div class="about-grid">
+                <div class="about-img-container">
+                    <div class="about-img-frame">
+                        <img src="images/user.png" alt="Arkodeep Chatterjee" class="about-img">
+                    </div>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About</h1>
-                    <p>
-                        i do everything that people around me think can't be done
+                <div class="about-text-content">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-description">
+                        AI Engineer and startup builder with 2+ years of hands-on experience building AI products, developer tools, and full-stack applications from 0 → 1. 
                     </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li> <span> Language </span> <br> Python, JS & TS, Solidity, C, Rust </li>
-                            <li> <span> Frontend & Backend </span> <br> React, Recoil, Tailwind, Shadcn UI, Aceternity
-                                UI, Magic UI, Flask, Express
-                            </li>
-                            <li> <span> Mobile </span> <br> React Native, NativeWind, Expo </li>
-                            <li> <span> Database & ORM </span> <br> Postgres, MongoDB, Prisma, Mongoose </li>
-                            <li> <span> Additional </span> <br> Next.js, Node.js, Git, Github, Linux, Gradio, Streamlit,
-                                Nodemailer, MDX, Appwrite, Playwright, Zod, Axios, Trigger.dev, Tiptap
-                            </li>
-                            <li> <span> Deep Tech </span> <br> Redis, Webpack, Socket.IO, WebRTC, Bash, PowerShell,
-                                Stable Diffusion, LoRA, AWS SDK, LiveKit, Nango
-                            </li>
-                            <li> <span> Generative AI & AI Automation </span> <br> Langchain, OpenAI, MistralAI, RAG,
-                                n8n, Flowise, Typebot, Botpress, PandasAI, AutoGen, Azure OpenAI Service & Studio,
-                                Vercel AI SDK, Composio </li>
-                            <li> <span> Blockchain </span> <br> Alchemy, Hardhat, Web3.js, MetaMask, Ether.js, IPFS
-                            </li>
-                            <li> <span> Jupyter Notebook & Online IDE </span> <br> Kaggle, Google Colab, Replit, Google
-                                IDX </li>
-                            <li> <span> Cloud & DevOps </span> <br> AWS, Docker, CI/CD, Kubernetes, Github Actions,
-                                Coolify </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li> <span> Realtime AI Lead </span> <br> Emvo AI </li>
-                            <li> <span> Chief of Technical Staff </span> <br> TruBot AI </li>
-                            <li> <span> Student Lead </span> <br> PeerHub </li>
-                            <li> <span> AI Advisor </span> <br> Connektra </li>
-                            <li> <span> Head of AI </span> <br> Numly Inc </li>
-                            <li> <span> Futurepreneur Program Member </span> <br> TiE Kolkata </li>
-                            <li> <span> Web Dev Co Lead </span> <br> GDSC GDG IEM </li>
-                            <li> <span> CTO </span> <br> TruePal </li>
-                            <li> <span> Founding Engineer </span> <br> YourStrength </li>
-                            <li> <span> Gen AI Intern </span> <br> Arhasi </li>
-                            <li> <span> Next.js AI Intern </span> <br> Lamarr </li>
-                            <li> <span> CTO </span> <br> NexaWings International </li>
-                            <li> <span> AI Researcher </span> <br> IEDC CSE </li>
-                            <li> <span> Web Developer </span> <br> IEM E-Cell </li>
-                            <li> <span> Founding Engineer </span> <br> Blockchain Federation </li>
-                            <li> <span> Full Stack Developer </span> <br> IEDC ECE Lab </li>
-                            <li> <span> Core Committee Member </span> <br> Institution's Innovation Council (IIC) </li>
-                            <li> <span> Student Partner </span> <br> Internshala </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li> <span> 2026 </span> <br> B.Tech in Computer Science Engineering <br> Institute of
-                                Engineering and Management <br> 8.79 </li>
-                            <li> <span> 2022 </span> <br> AISSCE CLASS 12 (Science) <br> Bhavan's Gangabux Kanoria
-                                Vidyamandir
-                                <br> 86.2%
-                            </li>
-                            <li> <span> 2020 </span> <br> AISSE CLASS 10 <br> Bhavan's Gangabux Kanoria Vidyamandir <br>
-                                89.6% </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="achievements">
-                        <ul>
-                            <li> <span> Bengal E-Summit (IEM Kolkata) </span> <br> Achieved 2nd prize for pitching
-                                product idea
-                            </li>
-                            <li> <span> Startup Mahakumbh (Bharat Mandapam, Pragati Maidan, New Delhi) </span> <br> Only
-                                Startup from West Bengal to participate</li>
-                            <li> <span> Aquawars (IIT G) </span> <br> Finished in the Top 3 final teams </li>
-                            <li> <span> Diversion 2k24 (IEM Kolkata) </span> <br> Winner of the Track: Best AI
-                                Automation </li>
-                            <li> <span> TiE Business Pitch Competition (IEM Kolkata) </span> <br> Secured 2nd prize
-                                after pitching startup idea </li>
-                            <li> <span> StatusCode 0 (IIIT Kalyani) </span> <br> Won the 2nd prize in a 30 hour long
-                                hackathon </li>
-                            <li> <span> RPV Innovation Challenge (IIT M) </span> <br> 2nd prize in Autonomous UAV
-                                category </li>
-                            <li> <span> Global Entrepreneurship Summit (IIT KGP) </span> <br> Awarded the 2nd prize in
-                                Business Plan discipline
-                            </li>
-                            <li> <span> IDE Bootcamp (IIT BBSR) </span> <br> Among the 6 prize winners on final day
-                            </li>
-                        </ul>
+                    <p class="about-description">
+                        Operating primarily in fast-moving startup environments, I take ownership across the entire product lifecycle—from product ideation and system design to implementation, deployment, and rapid iteration based on user feedback.
+                    </p>
+                    <div class="quick-facts">
+                        <div class="fact-card">
+                            <span class="fact-number">2+</span>
+                            <span class="fact-label">Years Experience</span>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-number">15+</span>
+                            <span class="fact-label">Shipped Deployments</span>
+                        </div>
+                        <div class="fact-card">
+                            <span class="fact-number">10K+</span>
+                            <span class="fact-label">Users Impacted</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="services">
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
         <div class="container">
-            <h1 class="sub-title">Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Full Stack Development</h2>
-                    <p> </p>
-                    <a href="#contact">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>AI Development <br> AI Automation </h2>
-                    <p> </p>
-                    <a href="#contact">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Cloud Deployment</h2>
-                    <p> </p>
-                    <a href="#contact">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">Projects</h1>
-            <div class="services-list">
-                <div>
-                    <h2> Lawyer GPT (5+ users) </h2>
-                    <h4> AI Assistant for Legal Professionals and Students </h4>
-                    <h4> Tech Stack: Python, Gradio, Langchain, OpenAI, RAG, LLM Fine-tuning </h4>
-                </div>
-                <div>
-                    <h2> Blockchain Bricks </h2>
-                    <h4> Convert Real Estate Deeds into NFTs </h4>
-                    <h4> Tech Stack: Solidity, JS, React, IPFS, Alchemy, Web3.js, MetaMask </h4>
-                </div>
-                <div>
-                    <h2> GOCPT (45+ users) </h2>
-                    <h4> Analyse Medical Reports with AI and generate GOCPT code for proper billing </h4>
-                    <h4> Tech Stack: JS, Langchain, OpenAI, Express, React, AWS, MongoDB </h4>
-                </div>
-                <div>
-                    <h2> Galva (30+ users) </h2>
-                    <h4> AI Electroplating Assistant </h4>
-                    <h4> Tech Stack: JS, Langchain, OpenAI, Express, React, Nodemailer, MongoDB </h4>
-                </div>
-                <div>
-                    <h2> Orom </h2>
-                    <h4> Helping small business owners and first time entrepreneurs convert anonymous website visitors
-                        into qualified leads </h4>
-                    <h4> Tech Stack: TS, Next.js, Nodemailer, AWS, Tailwind, Webpack, Shadcn, MDX </h4>
-                </div>
-                <div>
-                    <h2> Belma (5+ users) </h2>
-                    <h4> Invoicing App for Small Businesses </h4>
-                    <h4> Tech Stack: JS, React, Appwrite, Tailwind, Recoil </h4>
-                </div>
-                <div>
-                    <h2> Digante </h2>
-                    <h4> Website for an Old Age Home </h4>
-                    <h4> Tech Stack: HTML, CSS, JS, Bootstrap </h4>
-                </div>
-                <div>
-                    <h2> Storyia (50+ users) </h2>
-                    <h4> AI Story Generation platform for kids </h4>
-                    <h4> Tech Stack: JS, React, Express, MongoDB, Azure, Tailwind, Passport.js </h4>
-                </div>
-                <div>
-                    <h2> Art Story (120+ users) </h2>
-                    <h4> Self Updating Knowledge Base for all of the website content </h4>
-                    <h4> Tech Stack: Python, FastAPI, Langchain, OpenAI, FAISS, Socket.IO </h4>
-                </div>
-                <div>
-                    <h2> Closet Tech (10+ users) </h2>
-                    <h4> AI Virtual Try-On Room </h4>
-                    <h4> Tech Stack: Python, Stable Diffusion, LoRA, SDXL Models, SD WebUI, OpenCV </h4>
-                </div>
-                <div>
-                    <h2> RestaHelp (40+ users) </h2>
-                    <h4> AI powered Restaurant Assistant </h4>
-                    <h4> Tech Stack: Python, Pandas, FAISS, Langchain, OpenAI, Gradio, G-Drive </h4>
-                </div>
-                <div>
-                    <h2> Self Hosting (20+ users) </h2>
-                    <h4> Self Host Open Source Software on AWS to save money for pizza ;) </h4>
-                    <h4> Tech Stack: AWS, Coolify, Linux, Git, Github, Kasm, Docker, SMTP Setup </h4>
-                </div>
-                <div>
-                    <h2> AI Chatbots (170+ users) </h2>
-                    <h4> Chatbots with custom Knowledge Base & integration with AI Agents </h4>
-                    <h4> Tech Stack: Botpress, Flowise, Typebot, OpenAI, MistralAI, Pinecone </h4>
-                </div>
-                <div>
-                    <h2> AI Automation (230+ users) </h2>
-                    <h4> Automate repetitive daily tasks with AI to save costs </h4>
-                    <h4> Tech Stack: Python, n8n, OpenAI, PandasAI, AWS, AutoGen, Playwright </h4>
-                </div>
-                <div>
-                    <h2> Stream Docker Logs (3-4 users) </h2>
-                    <h4> Stream logs from inside of a docker container to a client app </h4>
-                    <h4> Tech Stack: Python, Docker Engine API & SDK, Flask, WebSocket, React, Vite </h4>
-                </div>
-                <div>
-                    <h2> SSL Certificate Manager (6-8 users) </h2>
-                    <h4> Manage & Renew SSL Certificates for all your websites from one place </h4>
-                    <h4> Tech Stack: Python, Flask, Linux, Docker, Certbot, EC2, YAML </h4>
-                </div>
-                <div>
-                    <h2> YourStrength (10-12 users) </h2>
-                    <h4> Strength aims to revolutionize the way athletes manage their sports careers by providing an
-                        all-in-one platform that combines social networking, performance tracking, and event management
-                    </h4>
-                    <h4> Tech Stack: TS, React Native, NativeWind, Expo, Recoil, Express, Node.js, Azure </h4>
-                </div>
-                <div>
-                    <h2> TruePal (20-22 users) </h2>
-                    <h4> Personalized AI companion app for meaningful conversations, emotional support, and creative
-                        engagement </h4>
-                    <h4> Tech Stack: TS, Next.js, Tailwind, Shadcn UI, Prisma, Nodemailer, Langchain, Vercel AI SDK, AWS
-                        SDK, Azure
-                        OpenAI Service </h4>
-                </div>
-                <div>
-                    <h2>SMTP, DNS, GIT Server Setup</h2>
-                    <h4> </h4>
-                    <h4> Tech Stack: </h4>
-                </div>
-                <div>
-                    <h2> Airlep </h2>
-                    <h4> </h4>
-                    <h4> Tech Stack: </h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact</h1>
-                    <p> <a href="https://mail.google.com/mail/u/0/?fs=1&to=arkodeep3404@gmail.com&tf=cm"
-                            target="_blank"> <i class="fa-solid fa-envelope"></i>
-                            arkodeep3404@gmail.com </a> </p>
-                    <p><i class="fa-solid fa-phone"></i>(+91) 91238 47498</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/arkodeep-chatterjee/" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/arkodeep3404" target="_blank"><i
-                                class="fa-brands fa-github"></i></i></a>
-                        <a href="https://www.instagram.com/farfetchworkparty/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://x.com/arkodeep3404" target="_blank"><i
-                                class="fa-brands fa-twitter-square"></i></a>
+            <h2 class="section-title text-center">Work Experience</h2>
+            <div class="timeline">
+                
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2026 – Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Backend AI Engineer</h3>
+                            <span class="company-tag">Neosophical Labs</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Built a LangGraph multi-agent ingestion pipeline auto-classifying and mapping Excel, XML, and PDF payroll data into a unified Postgres schema, cutting per-client HR migration time from 3 weeks to under 2 hours.</li>
+                            <li>Engineered tool-calling agents for header-to-column mapping (OpenRouter LLMs) and Gemini VLM-driven PDF→JSON extraction, ingesting 27K+ employee records across 14+ enterprise clients at 97% mapping accuracy.</li>
+                            <li>Shipped AI personalization backend for Ahoum Seeker (wellness companion), powering practitioner–seeker matching for 3K+ users with &lt;300ms p95 latency.</li>
+                        </ul>
                     </div>
-                    <a href="images/ArkodeepC_Resume.pdf" class="btn btn2" target="_blank" download> Resume </a>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Name" required>
-                        <input type="email" name="Email" placeholder="Email" required>
-                        <textarea name="Message" rows="6" placeholder="Message" required></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2025 – Nov 2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Founding Realtime AI Engineer</h3>
+                            <span class="company-tag">Emvo AI</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Architected “Agentverse,” a sub-second realtime voice engine delivering &lt;800ms p95 response across 50+ enterprise integrations.</li>
+                            <li>Built modular inference pipelines that collapsed client onboarding from weeks to under 30 minutes, powering 8K+ daily voice sessions.</li>
+                            <li>Cut inference cost 34% via streaming + concurrency optimizations while sustaining 98%+ uptime under multi-tenant production load.</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Nov 2024 – May 2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI Engineer Consultant</h3>
+                            <span class="company-tag">Numly Inc</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Led Engage AI, an enterprise coaching agent shipped to 6 paying clients; drove a 41% lift in employee active-engagement metrics.</li>
+                            <li>Designed adaptive learning loop personalizing leadership tracks for 2K+ users, cutting average skill-gap closure time by 27%.</li>
+                            <li>Shipped analytics layer surfacing skill drift and coaching ROI, reducing manager onboarding time by 40%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Nov 2023 – May 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>CTO</h3>
+                            <span class="company-tag">NexaWings International</span>
+                        </div>
+                        <ul class="experience-list">
+                            <li>Led a 7-engineer team building AI SaaS products (chatbots, workflow automation, AI integrations) shipped to 12+ industry clients.</li>
+                            <li>Drove $12K+ in revenue through custom GenAI deployments; raised average client process efficiency 3–4x.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="copyright">
-            <p> Sometimes, things change. <br>
-                Not because they have to. <br>
-                But because <b> you kept moving forward long enough for them to. </b> <br>
-                You never know how close you are. <br>
-                You just have to <i style="color: white;"> not give up. </i> <i class="fa-solid fa-heart"></i>
-                <br>
-                ~ OpenAI GPT 4o
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title text-center">Featured Projects</h2>
+            <p class="projects-subtitle-callout text-center">
+                A selection of high-impact AI agents and production-grade engineering deployments. 
+                <br>For my complete portfolio of client integrations, view the <a href="https://docs.google.com/document/d/1PfYKMSB0oWv6hj3x3k7A-_q2Dg6KL4gka_lhkeJcXZQ/edit?usp=sharing" target="_blank">Detailed Work History Google Doc <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.
             </p>
+            
+            <div class="projects-grid">
+                
+                <!-- Project 1: Agentverse -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Agentverse</h3>
+                        <span class="project-badge">Voice Engine</span>
+                    </div>
+                    <p class="project-subtitle">Realtime Voice Agent Engine @ Emvo AI</p>
+                    <ul class="project-bullets">
+                        <li>Sub-second latency voice engine delivering &lt;800ms p95 response time across 50+ integrations.</li>
+                        <li>Collapsed enterprise onboarding from weeks to under 30 minutes, powering 8K+ daily sessions.</li>
+                        <li>Optimized streaming and concurrency to slash inference costs by 34% with 98%+ uptime.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>WebRTC</span>
+                        <span>WebSockets</span>
+                        <span>FastAPI</span>
+                        <span>Emvo.ai</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Engage AI -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Engage AI</h3>
+                        <span class="project-badge">AI Agent</span>
+                    </div>
+                    <p class="project-subtitle">Enterprise Coaching System @ Numly Inc</p>
+                    <ul class="project-bullets">
+                        <li>Shipped to 6 paying enterprise clients, resulting in a 41% lift in employee active-engagement metrics.</li>
+                        <li>Designed adaptive learning loops that cut leadership track skill-gap closure times by 27% for 2K+ users.</li>
+                        <li>Built high-fidelity analytics tracking skill drift and coaching ROI.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>LangChain</span>
+                        <span>RAG</span>
+                        <span>AWS</span>
+                        <span>Numly.io</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Ahoum Seeker -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Ahoum Seeker</h3>
+                        <span class="project-badge">Personalization</span>
+                    </div>
+                    <p class="project-subtitle">AI Practitioner–Seeker Matching Backend</p>
+                    <ul class="project-bullets">
+                        <li>Engineered matching backend matching users with wellness practitioners with &lt;300ms p95 latency.</li>
+                        <li>Designed personalization algorithms to scale user interactions and matching for 3K+ users.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>LangChain</span>
+                        <span>Seeker.ahoum</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Dodge -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Dodge</h3>
+                        <span class="project-badge">Agentic AI</span>
+                    </div>
+                    <p class="project-subtitle">SAP Order-to-Cash Knowledge Graph & AI Agent</p>
+                    <ul class="project-bullets">
+                        <li>Built agentic system mapping 21K+ SAP entities into an interactive force-directed graph.</li>
+                        <li>Engineered ReAct agent with 6 specialized tools, conversation memory, and 3-tier guardrails.</li>
+                        <li>Implemented SSE streaming and model fallback handlers on API rate limits.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>FastAPI</span>
+                        <span>LangChain</span>
+                        <span>MongoDB</span>
+                        <span>Next.js 16</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: TruePal -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>TruePal</h3>
+                        <span class="project-badge">Companion App</span>
+                    </div>
+                    <p class="project-subtitle">Personalized AI Companion Web & Mobile App</p>
+                    <ul class="project-bullets">
+                        <li>Adaptive AI delivering empathetic, evolving conversations, scaling beta to 500+ users.</li>
+                        <li>Built customizable avatar system and low-latency secure chat infra for stress-reduction.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Next.js</span>
+                        <span>Tailwind</span>
+                        <span>Prisma</span>
+                        <span>Truepal.xyz</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Lawyer GPT -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Lawyer GPT</h3>
+                        <span class="project-badge">RAG</span>
+                    </div>
+                    <p class="project-subtitle">AI Legal Assistant for Law Firms and Students</p>
+                    <ul class="project-bullets">
+                        <li>Designed contract analysis RAG pipeline, generating custom drafts in a single prompt.</li>
+                        <li>Reduced legal research search times by 60% using semantic retrieval of past case documents.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Gradio</span>
+                        <span>OpenAI</span>
+                        <span>Vector DB</span>
+                    </div>
+                </div>
+
+                <!-- Project 7: Storyia -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Storyia</h3>
+                        <span class="project-badge">Generative AI</span>
+                    </div>
+                    <p class="project-subtitle">AI Kids' Story Generation Platform</p>
+                    <ul class="project-bullets">
+                        <li>Created full story generation system matching text narratives with auto-generated images.</li>
+                        <li>Scaled platform to over 50+ users, reducing image rendering queues using Redis worker queues.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Express</span>
+                        <span>Azure</span>
+                        <span>Storyia.app</span>
+                    </div>
+                </div>
+
+                <!-- Project 8: Galva -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>Galva</h3>
+                        <span class="project-badge">AI Assistant</span>
+                    </div>
+                    <p class="project-subtitle">AI Assistant for Electroplating & Technical Guidelines</p>
+                    <ul class="project-bullets">
+                        <li>Built specialized technical assistant providing electroplating formulations and guidelines.</li>
+                        <li>Integrated custom document search to support 30+ users answering chemical math queries.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>LangChain</span>
+                        <span>MongoDB</span>
+                        <span>Galva.ai</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title text-center">Technical Skills</h2>
+            <div class="skills-grid">
+                
+                <!-- Category 1 -->
+                <div class="skills-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <div class="skills-list-tags">
+                        <span>Python</span>
+                        <span>TypeScript</span>
+                        <span>JavaScript</span>
+                        <span>Solidity</span>
+                        <span>C</span>
+                        <span>Rust</span>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="skills-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI & LLMs</h3>
+                    <div class="skills-list-tags">
+                        <span>LangChain</span>
+                        <span>LangGraph</span>
+                        <span>OpenAI</span>
+                        <span>Claude Agent SDK</span>
+                        <span>Gemini Live API</span>
+                        <span>Google ADK</span>
+                        <span>AWS Bedrock</span>
+                        <span>Azure AI</span>
+                        <span>RAG</span>
+                        <span>Vector DBs</span>
+                        <span>PandasAI</span>
+                        <span>n8n</span>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="skills-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Backend & APIs</h3>
+                    <div class="skills-list-tags">
+                        <span>FastAPI</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>Flask</span>
+                        <span>REST</span>
+                        <span>WebSockets</span>
+                        <span>WebRTC</span>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="skills-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-display"></i></div>
+                    <h3>Frontend & Mobile</h3>
+                    <div class="skills-list-tags">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>React Native</span>
+                        <span>Expo</span>
+                        <span>NativeWind</span>
+                    </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="skills-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Infra & DevOps</h3>
+                    <div class="skills-list-tags">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>ECS</span>
+                        <span>Redis</span>
+                        <span>AWS OpenSearch</span>
+                        <span>GitHub Actions</span>
+                        <span>CI/CD</span>
+                        <span>Linux</span>
+                        <span>Coolify</span>
+                    </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="skills-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>Databases</h3>
+                    <div class="skills-list-tags">
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>Prisma</span>
+                        <span>Mongoose</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Achievements Section -->
+    <section class="edu-achieve-section">
+        <div class="container">
+            <div class="edu-achieve-grid">
+                
+                <!-- Education -->
+                <div class="edu-col">
+                    <h2 class="section-title">Education</h2>
+                    <div class="edu-card">
+                        <div class="edu-header">
+                            <h3>B.Tech, Computer Science & Engineering (AI)</h3>
+                            <span class="edu-gpa">GPA: 8.78</span>
+                        </div>
+                        <p class="edu-institution">Institute of Engineering and Management (IEM), Kolkata</p>
+                        <p class="edu-details">Focus on Artificial Intelligence, Machine Learning, and Software Systems. Class of 2026.</p>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="achieve-col">
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="achieve-card">
+                        <ul class="achieve-list">
+                            <li>
+                                <div class="achieve-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div class="achieve-text">
+                                    <strong>Startup Mahakumbh (New Delhi)</strong>
+                                    <p>Only startup from West Bengal selected to participate at Bharat Mandapam.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achieve-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="achieve-text">
+                                    <strong>RPV Innovation Challenge (IIT Madras)</strong>
+                                    <p>2nd prize in the Autonomous UAV category.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achieve-icon"><i class="fa-solid fa-medal"></i></div>
+                                <div class="achieve-text">
+                                    <strong>Global Entrepreneurship Summit (IIT Kharagpur)</strong>
+                                    <p>2nd prize in the Business Plan discipline.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Let's build something together</h2>
+                <p>Have an interesting project or want to chat about AI Agents, production LLMs, or full-stack engineering? Book a direct session on my Google Calendar.</p>
+                <div class="cta-buttons">
+                    <a href="https://calendar.app.google/sgKVt8mp3mmCS6Ca8" target="_blank" class="btn btn-primary btn-large">
+                        <i class="fa-regular fa-calendar-check"></i> Book a 15-Min Call
+                    </a>
+                    <a href="images/ArkodeepC_Resume.pdf" target="_blank" download class="btn btn-secondary btn-large">
+                        <i class="fa-solid fa-download"></i> Download Resume (PDF)
+                    </a>
+                </div>
+                <div class="gdoc-notice">
+                    <p>Want a complete printout of my deployments and roles? Access my <a href="https://docs.google.com/document/d/1PfYKMSB0oWv6hj3x3k7A-_q2Dg6KL4gka_lhkeJcXZQ/edit?usp=sharing" target="_blank" class="text-link">Detailed Work History Document <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+                <div class="contact-links-grid">
+                    <a href="mailto:arkodeep3404@gmail.com" class="contact-link-item">
+                        <i class="fa-regular fa-envelope"></i> arkodeep3404@gmail.com
+                    </a>
+                    <a href="tel:+919123847498" class="contact-link-item">
+                        <i class="fa-solid fa-phone"></i> +91 91238 47498
+                    </a>
+                    <a href="https://www.linkedin.com/in/arkodeep-chatterjee/" target="_blank" class="contact-link-item">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/arkodeep3404" target="_blank" class="contact-link-item">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Arkodeep Chatterjee. All rights reserved.</p>
+            <p class="quote">"Sometimes, things change. Not because they have to, but because you kept moving forward long enough for them to."</p>
+        </div>
+    </footer>
 
     <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link")
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-
         var sidemenu = document.getElementById("sidemenu");
 
         function openmenu() {
-            sidemenu.style.right = "0"
+            sidemenu.classList.add("sidemenu-active");
         }
 
         function closemenu() {
-            sidemenu.style.right = "-200px"
+            sidemenu.classList.remove("sidemenu-active");
         }
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxdCy0tX4298DB-SA8QoNicbhCKjkcJNACSPc8sC8rFIQ29PgB_YY7ecIydUsMjt-DG/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Thank You"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-
+        // Active link highlighting on scroll
+        window.addEventListener('scroll', () => {
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('.navbar-container nav ul li a');
+            
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                
+                if(top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        if (id && links.getAttribute('href').includes(id)) {
+                            links.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
     </script>
-
 </body>
 
 </html>
