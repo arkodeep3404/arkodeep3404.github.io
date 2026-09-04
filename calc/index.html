@@ -567,7 +567,7 @@
             <div class="quick-grid">
                 <div class="qfield">
                     <label for="qc-amount">Future amount (₹)</label>
-                    <input type="number" id="qc-amount" value="100000000" min="0" step="100000">
+                    <input type="text" inputmode="numeric" id="qc-amount" value="10,00,00,000">
                 </div>
                 <div class="qfield">
                     <label for="qc-years">Years from now</label>
@@ -593,8 +593,8 @@
                 <div class="field">
                     <div class="field-header">
                         <span class="field-label">Monthly investment</span>
-                        <span class="field-value"><input type="number" id="in-monthly" min="500" step="500"
-                                value="50000">&nbsp;<span class="unit">₹</span></span>
+                        <span class="field-value"><input type="text" inputmode="numeric" id="in-monthly"
+                                value="50,000">&nbsp;<span class="unit">₹</span></span>
                     </div>
                     <input type="range" id="sl-monthly" min="1000" max="500000" step="1000" value="50000">
                     <div class="hint">The amount you invest every month (SIP).</div>
@@ -722,9 +722,37 @@
             return '₹' + Math.round(v);
         };
 
+        // ---------- Indian-style comma formatting as you type ----------
+        // e.g. 10000000 -> "1,00,00,000" (1 crore), 100000 -> "1,00,000" (1 lakh)
+        function attachCommaFormatting(input) {
+            input.addEventListener('input', () => {
+                const raw = input.value;
+                const caret = input.selectionStart;
+                const digitsBeforeCaret = raw.slice(0, caret).replace(/\D/g, '').length;
+
+                let digits = raw.replace(/\D/g, '');
+                digits = digits.replace(/^0+(?=\d)/, ''); // trim leading zeros
+                if (digits.length > 15) digits = digits.slice(0, 15);
+
+                input.value = digits ? parseInt(digits, 10).toLocaleString('en-IN') : '';
+
+                // Put the caret back just after the same digit it was on
+                let pos = 0, seen = 0;
+                while (pos < input.value.length && seen < digitsBeforeCaret) {
+                    if (/\d/.test(input.value[pos])) seen++;
+                    pos++;
+                }
+                input.setSelectionRange(pos, pos);
+            });
+        }
+        attachCommaFormatting(document.getElementById('in-monthly'));
+        attachCommaFormatting(document.getElementById('qc-amount'));
+
+        const parseNum = (el) => parseFloat(String(el.value).replace(/,/g, '')) || 0;
+
         // ---------- Quick check ----------
         function runQuickCheck() {
-            const amt = parseFloat(document.getElementById('qc-amount').value) || 0;
+            const amt = parseNum(document.getElementById('qc-amount'));
             const yrs = Math.max(0, parseFloat(document.getElementById('qc-years').value) || 0);
             const inf = Math.max(0, parseFloat(document.getElementById('qc-inflation').value) || 0) / 100;
 
@@ -753,7 +781,7 @@
         inputs.forEach(({ num, rng }) => {
             const n = document.getElementById(num), r = document.getElementById(rng);
             n.addEventListener('input', () => {
-                const v = parseFloat(n.value);
+                const v = parseFloat(n.value.replace(/,/g, ''));
                 if (!isNaN(v)) {
                     const clamped = Math.min(Math.max(v, parseFloat(r.min)), parseFloat(r.max));
                     r.value = clamped;
@@ -761,7 +789,7 @@
                 compute();
             });
             r.addEventListener('input', () => {
-                n.value = r.value;
+                n.value = Number(r.value).toLocaleString('en-IN');
                 compute();
             });
         });
@@ -769,7 +797,7 @@
         let chart = null;
 
         function compute() {
-            const monthly = parseFloat(document.getElementById('in-monthly').value) || 0;
+            const monthly = parseNum(document.getElementById('in-monthly'));
             const stepup = (parseFloat(document.getElementById('in-stepup').value) || 0) / 100;
             const annualReturn = (parseFloat(document.getElementById('in-return').value) || 0) / 100;
             const years = Math.min(60, Math.max(1, parseInt(document.getElementById('in-years').value) || 1));
